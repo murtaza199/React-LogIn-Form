@@ -1,11 +1,10 @@
-import Murtaza from './Murtaza'
-// import {useState} from "react";
+import CartAdd from './CartAdd'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Murtaza/>
+      <CartAdd/>
     </div>
   );
 }
