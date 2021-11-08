@@ -1,20 +1,15 @@
 import "./App.css";
 import {useState} from "react"
-function App() {
-const[data,setData]=useState(null)
-const[print,setPrint]=useState(false)
-  function typeData(val){
-    setData(val.target.value)
-    setPrint(false)
-  }
-  return (
-    <div className="App">
-      {print?
-      <h2>{data}</h2>: null}
-      <input type="text" onChange={typeData}></input>
-      <button onClick={()=>setPrint(true)}>Print Data</button>
+function App(){
+const[status,setStatus]=useState(false)
+  return(
+    <div class="App">{status?<h1>Hello World</h1>:null}
+
+<button onClick={()=>setStatus(!status)}>Show/Hide</button>
+
     </div>
-  );
+  )
 }
+  
 
 export default App;
