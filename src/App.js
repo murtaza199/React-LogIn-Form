@@ -1,24 +1,14 @@
-import Employees from "./Employees";
 import "./App.css";
-
+import {useState} from "react"
 function App() {
+const[data,setData]=useState(null)
+  function typeData(val){
+    setData(val.target.value)
+  }
   return (
     <div className="App">
-      <Employees
-        name="Murtaza"
-        post="Engineer"
-        others={{ add: "Delhi", mobile: "0000" }}
-      />
-      <Employees
-        name="Hassan"
-        post="Developer"
-        others={{ add: "Bangluru", mobile: "1111" }}
-      />
-      <Employees
-        name="Ansari"
-        post="Tester"
-        others={{ add: "Pune", mobile: "2222" }}
-      />
+      <h2>{data}</h2>
+      <input type="text" onChange={typeData}></input>
     </div>
   );
 }
